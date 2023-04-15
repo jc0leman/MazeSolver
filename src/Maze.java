@@ -9,7 +9,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Maze {
+public class
+Maze {
     private MazeCell[][] mazeGrid;
     private MazeCell startCell;
     private MazeCell endCell;
@@ -146,6 +147,10 @@ public class Maze {
      * @return boolean true/false
      */
     public boolean isValidCell(int row, int col) {
+        if(mazeGrid[row][col].isWall()) {
+            return false;
+        }
+
         // TODO: Complete this function
         return true;
     }
